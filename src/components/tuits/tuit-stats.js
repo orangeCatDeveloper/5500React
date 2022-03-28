@@ -18,11 +18,13 @@ const TuitStats = ({ tuit, likeTuit = () => {}, dislikeTuit = () => {} }) => {
   const clickLike = async () => {
     await likeTuit(tuit);
     await findIfLike();
+    await findIfDislike();
   };
 
   const clickDislike = async () => {
     await dislikeTuit(tuit);
     await findIfDislike();
+    await findIfLike();
   };
 
   return (
