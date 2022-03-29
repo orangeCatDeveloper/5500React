@@ -126,6 +126,16 @@ const Profile = () => {
                 Likes
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                to="/profile/disLikes"
+                className={`nav-link ${
+                  location.pathname.indexOf("disLikes") >= 0 ? "active" : ""
+                }`}
+              >
+                Dislikes
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -134,6 +144,7 @@ const Profile = () => {
         <Route path="/tuits-and-replies" element={<TuitsAndReplies />} />
         <Route path="/media" element={<Media />} />
         <Route path="/likes" element={<MyLikes />} />
+        <Route path="/disLikes" element={<MyDislikes />} />
       </Routes>
     </div>
   );

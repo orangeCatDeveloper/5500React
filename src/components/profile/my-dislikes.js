@@ -1,7 +1,7 @@
 import Tuits from "../tuits";
 import * as service from "../../services/likes-service";
 import { useEffect, useState } from "react";
-/*
+
 const MyDislikes = () => {
   const [dislikedTuits, setDislikedTuis] = useState([]);
   const findTuitsIDislike = () =>
@@ -17,4 +17,3 @@ const MyDislikes = () => {
   );
 };
 export default MyDislikes;
-*/
