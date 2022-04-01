@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 import * as service from "../../services/tuits-service";
 
 const TuitStats = ({ tuit, likeTuit = () => {}, dislikeTuit = () => {} }) => {
-  const [ifLike, setIfLike] = useState([]);
+  const [ifLike, setIfLike] = useState(null);
   const findIfLike = () =>
     service.findIfUserLikesTuit("me", tuit._id).then(like => setIfLike(like));
   //useEffect(findIfLike, []);
 
-  const [ifDislike, setIfDislike] = useState([]);
+  const [ifDislike, setIfDislike] = useState(null);
   const findIfDislike = () =>
     service
       .findIfUserDislikesTuit("me", tuit._id)
