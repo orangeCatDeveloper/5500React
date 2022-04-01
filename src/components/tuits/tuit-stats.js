@@ -6,14 +6,14 @@ const TuitStats = ({ tuit, likeTuit = () => {}, dislikeTuit = () => {} }) => {
   const [ifLike, setIfLike] = useState(null);
   const findIfLike = () =>
     service.findIfUserLikesTuit("me", tuit._id).then(like => setIfLike(like));
-  useEffect(findIfLike, []);
+  //useEffect(findIfLike, []);
 
   const [ifDislike, setIfDislike] = useState(null);
   const findIfDislike = () =>
     service
       .findIfUserDislikesTuit("me", tuit._id)
       .then(dislike => setIfDislike(dislike));
-  useEffect(findIfDislike, []);
+  //useEffect(findIfDislike, []);
 
   const clickLike = async () => {
     await likeTuit(tuit);
