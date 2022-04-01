@@ -18,13 +18,13 @@ const TuitStats = ({ tuit, likeTuit = () => {}, dislikeTuit = () => {} }) => {
   const clickLike = async () => {
     await likeTuit(tuit);
     await findIfLike();
-    await findIfDislike();
+    //await findIfDislike();
   };
 
   const clickDislike = async () => {
     await dislikeTuit(tuit);
     await findIfDislike();
-    await findIfLike();
+    //await findIfLike();
   };
 
   return (
@@ -46,7 +46,8 @@ const TuitStats = ({ tuit, likeTuit = () => {}, dislikeTuit = () => {} }) => {
           )}
           {tuit.stats && tuit.stats.likes}
         </span>
-
+      </div>
+      <div className="col">
         <span onClick={() => clickDislike()}>
           {ifDislike ? (
             <i className="fas fa-thumbs-down me-1" style={{ color: "red" }}></i>
