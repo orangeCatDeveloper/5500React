@@ -2,10 +2,9 @@ import React from "react";
 import TuitStats from "./tuit-stats";
 import TuitImage from "./tuit-image";
 import TuitVideo from "./tuit-video";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Tuit = ({ tuit, deleteTuit, likeTuit, dislikeTuit }) => {
-  const navigate = useNavigate();
   const daysOld = tuit => {
     const now = new Date();
     const nowMillis = now.getTime();
@@ -29,7 +28,6 @@ const Tuit = ({ tuit, deleteTuit, likeTuit, dislikeTuit }) => {
     return old;
   };
   return (
-    // <li onClick={() => navigate(`/tuit/${tuit._id}`)}
     <li className="p-2 ttr-tuit list-group-item d-flex rounded-0">
       <div className="pe-2">
         {tuit.postedBy && (

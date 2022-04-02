@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import MyDislikes from "../components/profile/my-dislikes";
+import MyDislikesMock from "../components/profile/mock-dislikes";
 
 test("test dislike render", async () => {
-  render(<MyDislikes />);
+  render(<MyDislikesMock />);
   const linkElement = screen.getByText(/Cat/i);
   expect(linkElement).toBeInTheDocument();
 });
